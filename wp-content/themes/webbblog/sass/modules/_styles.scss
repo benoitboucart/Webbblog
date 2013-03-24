@@ -1,0 +1,110 @@
+//font-family: 'Merriweather', Arial, serif; font-weight: 400,700;
+body {
+    font-family: 'Merriweather', Arial, serif; font-weight: 400;
+}
+.novecento {font-family: 'NovecentowideLightBold', Arial, serif;}
+.novecento-bold {font-family: 'NovecentowideNormalRegular', Arial, serif;}
+b, strong {font-weight: 700;}
+
+
+a,a:visited {
+	color: $color_red;
+	text-decoration: none;
+	@include transition(all 200ms linear);
+}
+a:active,
+a:hover {
+	color: $color_darkred;
+}
+
+
+$timeline-position: 4.85em;
+.container-dark {
+	position: relative;
+	background: $color_darkred;
+
+	.col12 {
+		position: relative;
+		padding-top: 2em;padding-bottom: 1.5em;
+
+		&:after{
+			position: absolute; content: ""; top: 0; bottom: 0; left: -$timeline-position; right: auto; 
+			width: 7px;
+			background: #402c2c;
+		}
+	}
+}
+.container-about{
+ 	background: #2B0606; display: none;
+
+	.col12 {
+		position:relative;
+		padding-top: 2em;padding-bottom: 1.5em;
+
+		&:after{
+			position: absolute; content: ""; top: 0; bottom: 0; left: -$timeline-position; right: auto; 
+			width: 7px;
+			background: #332323; 
+		}
+	}
+}
+.container-light {
+	background: $color_red;
+}
+.container-white {
+	position: relative;
+
+	.col12 {
+		position: relative;
+		padding-top: 2em; padding-bottom: 5em;
+
+		&:after{
+			position: absolute; content: ""; top: 0; bottom: 0; left: -$timeline-position; right: auto; 
+			width: 7px;
+			background: #efefef;
+		}
+	}
+}
+.container-verydark {
+	background:#283030;
+
+	.col-barred {
+		position:relative;
+
+		&:after{
+			position: absolute; content: ""; top: 0; bottom: 0; left: -$timeline-position; right: auto; 
+			width: 7px;
+			background: #1d2222;
+		}
+	}
+}
+.container-title {
+ 	background: #f4f4f4 url(assets/img/slider.jpg) top center no-repeat;
+
+	.col12 {
+		position:relative;
+		padding-top: 2.3em; padding-bottom: 3em;
+
+		&:after{
+			position: absolute; content: ""; top: 0; bottom: 0; left: -$timeline-position; right: auto; 
+			width: 7px;
+			background: #dededf; background: rgba(85, 110, 112, .15);
+		}
+	}
+}
+.container-title.entry-header-page .col12{padding-bottom: 2.3em;}
+
+.container-gray{
+ 	background: #f5f5f5; 
+
+	.col12 {
+		position:relative;
+		padding-top: 0; padding-bottom: 2.5em;
+
+		&:after{
+			position: absolute; content: ""; top: 0; bottom: 0; left: -$timeline-position; right: auto; 
+			width: 7px;
+			background: #e7e7e7; background: rgba(85, 110, 112, .15);
+		}
+	}
+}

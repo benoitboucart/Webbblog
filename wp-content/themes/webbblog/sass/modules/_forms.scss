@@ -1,0 +1,11 @@
+input[type="text"], input[type="search"], textarea{
+	display: block; border: 3px solid #EEEEEE; padding: 0.5em 0.7em;margin: .5em 0 1.7em;
+	font-size: 1.1em; font-family: 'Merriweather', Arial, serif; font-weight: 400; 
+	@include border-radius(10px);
+}
+
+textarea{
+	width: 100%;  
+	padding: .9em 1em; 
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}

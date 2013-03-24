@@ -1,0 +1,45 @@
+
+// //////////////////////
+// SUSY
+// //////////////////////
+$total-columns  : 12;             // a 12-column grid
+$column-width   : 3.5em;            // each column is 4em wide
+$gutter-width   : .75em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
+$media-layout 	: 12 lt-ie9;  // Output is included under `.lt-ie9` class,
+
+ /* ==========================================================================
+  	CUSTOM FRAMEWORK Benoît Boucart
+  	Generate helper classes for SUSY
+   ========================================================================== */
+$class_column 	: "col";
+$class_container: "row";
+@mixin generate_helper_classes(){
+
+	/* Helper Class: Container */
+	.#{$class_container}{
+		@include container; 
+		// overflow: hidden;
+	}
+
+	/* Helper Class: Columns */ 
+	@for $i from 1 through ( $total-columns - 1 ) {
+		.#{$class_column}#{$i} {
+			@include span-columns($i,$total-columns);
+		}
+	}
+
+	.col#{$total-columns} {
+		clear: both;
+	}
+	.collast {@include omega;}
+}
+@include generate_helper_classes();
+
+// // RESPONSIVE:
+// @include at-breakpoint(0 6 47em) {
+// 	@include layout(6) {
+// 		@include generate_helper_classes();
+// 	}
+// }
