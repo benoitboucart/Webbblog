@@ -47,6 +47,12 @@
 					</div><!-- .entry-content -->
 
 					<footer class="entry-meta">
+						<ul class="socialcount socialcount-large" data-url="<?php urlencode(the_permalink()); ?>" data-counts="true" data-share-text="<?php urlencode(the_title()); ?> - <?php urlencode(the_permalink()); ?>">
+							<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php urlencode(the_permalink()); ?>" title="Share on Facebook"><span class="social-icon icon-facebook"></span><span class="count">Like</span></a></li>
+							<li class="twitter"><a href="https://twitter.com/intent/tweet?text=<?php urlencode(the_permalink()); ?>" title="Share on Twitter"><span class="social-icon icon-twitter"></span><span class="count">Tweet</span></a></li>
+							<li class="googleplus"><a href="https://plus.google.com/share?url=<?php urlencode(the_permalink()); ?>" title="Share on Google Plus"><span class="social-icon icon-googleplus"></span><span class="count">+1</span></a></li>
+						</ul>
+					
 						<?php
 							/* translators: used between list items, there is a space after the comma */
 							$category_list = get_the_category_list( __( ', ', 'webbblog' ) );

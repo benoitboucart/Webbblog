@@ -35,7 +35,7 @@
 .container-title {text-align: center;}
 .container-title h1 {
 	margin: 0; 
-	font-size:3.1875em; font-family: 'NovecentowideLightBold', Arial, serif; font-weight: normal; line-height: 1.1em; color: #4a3232;
+	font-size:2.85em; font-family: 'NovecentowideLightBold', Arial, serif; font-weight: normal; line-height: 1.1em; color: #4a3232;
 }
 
 .mini-title {
@@ -82,7 +82,7 @@ blockquote {
 	// border-left: 5px solid #ee6464;
 	// font-style: italic; font-size: 0.95em; color: #4B4B4B;
 	z-index: 3000; position: relative;
-	margin: 1.2em 0 1.2em -4.6em; padding: .2em 0 .2em 95px; border-left: 7px solid #ee6464; 
+	margin: 1.2em 0 1.2em -4.65em; padding: .2em 0 .2em 95px; border-left: 7px solid #ee6464; 
 	font-style: italic; font-size: 0.95em; color: #4B4B4B; 
 }
 hr {border-top: 1px dotted #ccc; border-bottom: 1px dotted #ccc; margin: 1.6em 0;}
@@ -132,7 +132,7 @@ hr {border-top: 1px dotted #ccc; border-bottom: 1px dotted #ccc; margin: 1.6em 0
 		font-family: 'NovecentowideLightBold', Arial, serif; font-weight: normal; margin: 0; font-size: 1.5em;
 
 		a,a:visited{padding:0;color: #3E3E3E;/*$color_red;*/background:none;}
-		a:hover {background:none;text-decoration: underline;}
+		a:hover {background:none;text-decoration: underline;color: #3E3E3E;}
 	}
 	.icon-readmore,.icon-readmore:visited {
 		position: absolute; top: 50%; margin-top: -15px; right: 0; left: auto; bottom: auto; font-size: 1.4em; color: #DDDDDD;
@@ -152,18 +152,18 @@ hr {border-top: 1px dotted #ccc; border-bottom: 1px dotted #ccc; margin: 1.6em 0
 /**
  ** Links
  **/
-.tag, .tag:visited{
+body .tag, body .tag:visited{
 	position: relative; z-index: 3; display: inline-block; background: $color_red; color: #fff; 
 	padding: .15em .3em; margin-bottom: .7em; 
 	text-transform: uppercase; font-size: .625em; font-family: 'NovecentowideNormalRegular', Arial, serif; font-weight: normal;
 
 	@include border-radius(3px);
 }
-	.tag:after {
+	body .tag:after {
 		position: absolute; z-index: 2; content: ""; top: auto; right: 4px; bottom: -4px; left: auto; 
 		width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid $color_red;
 	}
-	.tag:hover:after {border-top-color: #505050;}
+	body .tag:hover:after {border-top-color: #505050;}
 .blog-content a, .blog-content a:visited, .btn-style, a.btn-style, a.btn-style:visited, .btn-container a,.btn-container a:visited, #submit, #searchform .submit{
 	display: inline-block;
 	padding: .35em .25em .25em .25em; line-height: 1em;
@@ -184,7 +184,7 @@ hr {border-top: 1px dotted #ccc; border-bottom: 1px dotted #ccc; margin: 1.6em 0
 	@include border-radius(4px);
 }
 	a.btn-style.add-a-comment {position: relative; z-index: 300; top: -1.4em; margin: -0 0 2.65em 0; }
-	.blog-content a:hover, .tag:hover, a.btn-style:hover, .btn-container a:hover, #submit:hover, #searchform .submit:hover {background: #505050; color: #fff;}
+	.blog-content a:hover, body .tag:hover, a.btn-style:hover, .btn-container a:hover, #submit:hover, #searchform .submit:hover {background: #505050; color: #fff;}
 
 
 pre, code {

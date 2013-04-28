@@ -2420,7 +2420,7 @@ a:hover {
 
 .container-title h1 {
   margin: 0;
-  font-size: 3.1875em;
+  font-size: 2.85em;
   font-family: 'NovecentowideLightBold', Arial, serif;
   font-weight: normal;
   line-height: 1.1em;
@@ -2498,7 +2498,7 @@ a:hover {
 blockquote {
   z-index: 3000;
   position: relative;
-  margin: 1.2em 0 1.2em -4.6em;
+  margin: 1.2em 0 1.2em -4.65em;
   padding: .2em 0 .2em 95px;
   border-left: 7px solid #ee6464;
   font-style: italic;
@@ -2607,6 +2607,7 @@ hr {
 .blog-item-list h2 a:hover {
   background: none;
   text-decoration: underline;
+  color: #3E3E3E;
 }
 .blog-item-list .icon-readmore, .blog-item-list .icon-readmore:visited {
   position: absolute;
@@ -2636,7 +2637,7 @@ hr {
 /**
  ** Links
  **/
-.tag, .tag:visited {
+body .tag, body .tag:visited {
   position: relative;
   z-index: 3;
   display: inline-block;
@@ -2655,7 +2656,7 @@ hr {
   border-radius: 3px;
 }
 
-.tag:after {
+body .tag:after {
   position: absolute;
   z-index: 2;
   content: "";
@@ -2670,7 +2671,7 @@ hr {
   border-top: 4px solid #ee6464;
 }
 
-.tag:hover:after {
+body .tag:hover:after {
   border-top-color: #505050;
 }
 
@@ -2732,7 +2733,7 @@ a.btn-style.add-a-comment {
   margin: 0 0 2.65em 0;
 }
 
-.blog-content a:hover, .tag:hover, a.btn-style:hover, .btn-container a:hover, #submit:hover, #searchform .submit:hover {
+.blog-content a:hover, body .tag:hover, a.btn-style:hover, .btn-container a:hover, #submit:hover, #searchform .submit:hover {
   background: #505050;
   color: #fff;
 }
@@ -2920,6 +2921,318 @@ textarea {
   box-sizing: border-box;
 }
 
+/* SocialCount - v0.1.5 - 2013-01-22
+* https://github.com/filamentgroup/SocialCount
+* Copyright (c) 2013 zachleat; Licensed MIT */
+/* SocialCount - v0.1.5 - 2013-01-22
+* https://github.com/filamentgroup/SocialCount
+* Copyright (c) 2013 zachleat; Licensed MIT */
+.socialcount > li a, .blog-content .socialcount a {
+  background: transparent;
+  margin: auto;
+  padding: 12px 5px 8px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.socialcount .social-icon {
+  font-size: 1.05em;
+}
+
+.socialcount {
+  color: #fff;
+  font-size: .875em;
+  line-height: 2.2em;
+}
+
+.socialcount > li {
+  background-color: #999;
+}
+
+.socialcount > li, .socialcount > li > a:focus, .socialcount .loading {
+  border-radius: 5px;
+}
+
+.socialcount > li > a:focus, .socialcount > li:hover, .socialcount > li.hover {
+  background-color: #464646;
+}
+
+.socialcount {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 .6em 0;
+  overflow: hidden;
+}
+
+.socialcount-large {
+  line-height: normal;
+}
+
+.socialcount:link, .socialcount:visited {
+  color: inherit;
+}
+
+.socialcount > li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  position: relative;
+  vertical-align: top;
+  min-width: 80px;
+  min-height: 30px;
+  text-align: center;
+  white-space: nowrap;
+  *margin-right: 4px;
+}
+
+.socialcount-small > li {
+  min-width: 0;
+}
+
+.blog-content .socialcount-large li, .socialcount-large > li {
+  float: left;
+  margin: 0 .6em .6em 0;
+}
+
+.socialcount.recommend .facebook {
+  min-width: 120px;
+}
+
+.socialcount-small.recommend .facebook {
+  min-width: 0;
+}
+
+.socialcount-large > li, .socialcount-large.recommend .facebook {
+  min-width: 105px;
+}
+
+.socialcount > li > a {
+  display: block;
+  padding: 0 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.socialcount-small > li > a {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.socialcount-large > li > a {
+  padding: 12px 5px 8px;
+}
+
+.socialcount .count {
+  color: inherit;
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  text-align: center;
+  margin-left: 6px;
+}
+
+.socialcount-large .count {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  padding-top: 10px;
+}
+
+.socialcount-small .count {
+  margin-left: 0;
+}
+
+.socialcount .facebook iframe {
+  height: 21px;
+  width: 90px;
+}
+
+.socialcount.de_DE .facebook iframe {
+  width: 78px;
+}
+
+.socialcount.like .facebook iframe {
+  width: 48px;
+}
+
+.socialcount.like.de_DE .facebook iframe {
+  width: 75px;
+}
+
+.socialcount .button {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.socialcount .button iframe {
+  pointer-events: auto;
+}
+
+.socialcount-large .button {
+  top: auto;
+  bottom: 2px;
+}
+
+.socialcount.grade-a.activate-on-hover > li.hover .count, .socialcount.grade-a.activate-on-click > li.hover.active .count {
+  text-indent: -999px;
+}
+
+.socialcount.grade-a.activate-on-hover > li.hover .button, .socialcount.grade-a.activate-on-click > li.hover.active .button {
+  display: block;
+}
+
+.socialcount.grade-a.activate-on-hover > li.hover > a, .socialcount.grade-a.activate-on-click > li.hover.active > a {
+  cursor: default;
+}
+
+.socialcount-small.grade-a.activate-on-hover > li.hover > a, .socialcount-small.grade-a.activate-on-click > li.hover.active > a, .socialcount.grade-a.activate-on-hover > li.hover .button iframe, .socialcount.grade-a.activate-on-click > li.hover.active .button iframe {
+  cursor: pointer;
+}
+
+.socialcount .loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 3;
+  background-color: #aaa;
+  background-color: rgba(170, 170, 170, 0.7);
+  color: #000;
+  text-transform: uppercase;
+  font-size: .75em;
+  text-align: center;
+}
+
+.socialcount-large .loading {
+  padding-top: 30%;
+}
+
+.socialcount .loading .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+  background: #fff;
+  opacity: 0;
+  border-radius: 50%;
+  -webkit-animation: socialCountLoadingFade .6s infinite;
+  -moz-animation: socialCountLoadingFade .6s infinite;
+  animation: socialCountLoadingFade 0.6s infinite;
+}
+
+.socialcount .loading .dot:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.socialcount .loading .dot:nth-child(2) {
+  -webkit-animation-delay: .05s;
+  -moz-animation-delay: .05s;
+  animation-delay: .05s;
+}
+
+.socialcount .loading .dot:nth-child(3) {
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  animation-delay: .1s;
+}
+
+@-webkit-keyframes socialCountLoadingFade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes socialCountLoadingFade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes socialCountLoadingFade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.social-icon {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  *margin-right: 5px;
+}
+
+.socialcount.grade-a.activate-on-hover > li.hover .social-icon, .socialcount.grade-a.activate-on-click > li.hover.active .social-icon {
+  display: none;
+}
+
+.socialcount-small.grade-a.activate-on-hover > li.hover .social-icon, .socialcount-small.grade-a.activate-on-click > li.hover.active .social-icon, .socialcount-large.grade-a.activate-on-hover > li.hover .social-icon, .socialcount-large.grade-a.activate-on-click > li.hover.active .social-icon {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+.icon-sprite, .icon-googleplus, .icon-share {
+  background: url("assets/img/icon-s8df06ae4f6.png") no-repeat;
+}
+
+.icon-googleplus {
+  background-position: -21px 0;
+  height: 17px;
+  width: 20px;
+}
+
+.icon-share {
+  background-position: -45px 0;
+  height: 16px;
+  width: 20px;
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .icon-sprite, .icon-googleplus, .icon-share {
+    -webkit-background-size: auto 17px;
+    -moz-background-size: auto 17px;
+    -o-background-size: auto 17px;
+    background-size: auto 17px;
+    background-image: url("assets/img/icon-hd-s9293bc9986.png");
+  }
+}
 /* ==========================================================================
    Helpers Benoit Boucart
    ========================================================================== */
